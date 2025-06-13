@@ -1,11 +1,11 @@
 const mongoose = require('mongoose');
 
-const itemSchema = new mongoose.Schema({
+const ItemSchema = new mongoose.Schema({
   nombre: String,
   descripcion: String,
   precio: Number,
   img: String,
-  userId: { type: mongoose.Schema.Types.ObjectId, ref: 'User', required: true }, // Add this line
+  userId: { type: mongoose.Schema.Types.ObjectId, ref: 'User', required: true }
 });
 
-module.exports = mongoose.model('Item', itemSchema);
+module.exports = mongoose.model('Item', ItemSchema);
